@@ -1,10 +1,17 @@
-import { createStackNavigator, createAppContainer } from 'react-navigation';
-import HomeScreen from './src/screens/HomeScreen';
-import LayoutScreen from './src/screens/LayoutScreen';
+import { createStackNavigator, createAppContainer } from "react-navigation";
+import AccountScreen from "./src/screens/AccountScreen";
+import Splash from "./src/screens/Splash";
 
-const navigator = createStackNavigator({
-  Home: HomeScreen,
-  Layout: LayoutScreen
-});
+const navigator = createStackNavigator(
+  {
+    Accounts: AccountScreen,
+    Splash: Splash
+  },
+  {
+    initialRouteName: "Splash",
+    header: null,
+    headerMode: "none"
+  }
+);
 
 export default createAppContainer(navigator);
